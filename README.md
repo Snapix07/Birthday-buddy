@@ -1,39 +1,93 @@
-## Figma URL
+## 🎉 Birthday Reminder App (React)
 
-[Birthday Buddy](https://www.figma.com/file/e2vsLe9DMnXZIygNHkwGL1/Birthday-buddy?node-id=0%3A1&t=AGNWdO5QQGOoNCfD-1)
+A simple React app that displays a list of people's birthdays and allows users to clear the list with a single click. Built using functional components and the `useState` hook.
 
-## Steps
+---
 
-- don't worry about CSS, checkout example image
+### 📸 Preview
 
-#### Import Data
+![alt text](image.png)
 
-In App.jsx, import the data (from data.js) to be rendered as an array of objects. Each object should represent a person and contain properties such as name, age, and image URL.
 
-#### Setup State Variable
+---
 
-Then, set up the data as a state variable using the useState hook. This will allow the data to be modified and have those changes automatically reflected in the rendered output.
+### ⚙️ Features
 
-#### Iterate and Render
+- 🧠 Uses `useState` for state management  
+- 🗂 Displays a list of birthdays  
+- 🧹 "Clear All" button to remove the list  
+- 🖼 Renders profile images, names, and ages  
+- 📱 Responsive & clean UI with basic CSS
 
-Display the number of items in the list by using the length property of the state variable. This information can be displayed using plain text or added to a message or heading element.
+---
 
-To render the list of people, iterate over the data array using the map method. For each item in the array, render an image element (hint : use inline styles to make width smaller).Additionally, render the person's name and age as plain text.
+### 🚀 Getting Started
 
-Create a List component to hold the rendered items. This component can be a simple div element containing the list of Person components.
+#### 1. Clone the repo
 
-Create a Person component to render the information for each person. This component should receive the person data as props and render the image, name, and age information.
+```bash
+git clone https://github.com/Snapix07/Birthday-buddy.git
+cd Birthday-buddy
+```
 
-#### Clear List
+#### 2. Install dependencies
 
-In App.jsx, add a button to clear the list, and set up the functionality by defining a function that resets the state variable to an empty array.
+```bash
+npm install
+```
 
-Overall, the flow of the application should look something like this:
+#### 3. Start the development server
 
-- Import the data you want to render in App.jsx.
-- Set up the data as a state variable using useState.
-- Use the map method to iterate over the data array and render a Person component for each person.
-- Each Person component should render an image with a style prop to control the width, the person's name, and the person's age.
-- Create a List component that holds the rendered items.
-- Create a button with functionality to clear the list.
-- Display the number of items in the list using the length property of the state variable. This can be rendered using plain text or added to a message or heading element.
+```bash
+npm start
+```
+
+The app will be available at `http://localhost:3000`.
+
+---
+
+### 📁 Project Structure
+
+```
+src/
+│
+├── App.jsx           # Main component with useState
+├── List.jsx          # List component to render Person cards
+├── Persons.jsx       # Individual Person component
+├── data.js           # Static birthday data
+├── index.css         # Basic styling
+└── index.js          # Entry point
+```
+
+---
+
+### 🧠 useState Example
+
+In `App.jsx`:
+
+```jsx
+const [people, setPeople] = useState(data);
+```
+
+- Initializes the list of people with data from `data.js`
+- When user clicks "Clear All", it calls `setPeople([])` to empty the list
+
+---
+
+### 📦 Dependencies
+
+- React
+- Vite or Create React App (CRA)
+- CSS
+
+---
+
+### 👨‍💻 Author
+
+Made with ❤️ by Snapix
+
+---
+
+### 📜 License
+
+This project is open source and free to use.
